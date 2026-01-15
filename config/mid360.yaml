@@ -88,4 +88,8 @@ pcd_save:
 
 image_save:
   img_save_en: false
+<<<<<<< HEAD
   interval: 1
+=======
+  interval: 1
+>>>>>>> close log

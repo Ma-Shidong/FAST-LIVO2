@@ -577,14 +577,14 @@ void LIVMapper::imu_prop_callback()
 {
   
   if (p_imu->imu_need_init || !new_imu || !ekf_finish_once) { 
-    ROS_WARN_STREAM(
-      "[EKF SKIP] "
-      << "imu_need_init=" << p_imu->imu_need_init << ", "
-      << "new_imu=" << new_imu << ", "
-      << "ekf_finish_once=" << ekf_finish_once
-  );
+  //   ROS_WARN_STREAM(
+  //     "[EKF SKIP] "
+  //     << "imu_need_init=" << p_imu->imu_need_init << ", "
+  //     << "new_imu=" << new_imu << ", "
+  //     << "ekf_finish_once=" << ekf_finish_once
+  // );
     return; }
-  ROS_INFO("imu_prop_callback called");
+  // ROS_INFO("imu_prop_callback called");
 
   mtx_buffer_imu_prop.lock();
   new_imu = false; // 控制propagate频率和IMU频率一致
